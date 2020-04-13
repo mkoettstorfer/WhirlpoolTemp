@@ -1,7 +1,8 @@
 /*
  NodeMcu-Client-Aussentemperatur
+ 1 x Sensor DHT22 für Temperatur und Luftfeuchtigkeit
+ 1 x Sensor DS18B20 für Whirlpoor Wassertemperatur
  
- Projektbeschreibung und weitere Beispiele unter https://www.mikrocontroller-elektronik.de/
 */
 
 #include <ESP8266WiFi.h>
