@@ -1,6 +1,6 @@
 /*
  NodeMcu-Client-Aussentemperatur
- 1 x Sensor DHT22 für Ttemperatur und Luftfeuchtigkeit
+ 1 x Sensor DHT22 für Temperatur und Luftfeuchtigkeit
  1 x Sensor DS18B20 für Whirlpoor Wassertemperatur
  
 */
