@@ -1,0 +1,2 @@
+# WhirlpoolTemp
+ Whirlpool Temperaturüberwachung
