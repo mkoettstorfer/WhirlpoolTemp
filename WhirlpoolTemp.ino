@@ -1,8 +1,7 @@
 /*
  NodeMcu-Client-Aussentemperatur
- 1 x Sensor DHT22 für Temperatur und Luftfeuchtigkeit
- 1 x Sensor DS18B20 für Whirlpoor Wassertemperatur
  
+ Projektbeschreibung und weitere Beispiele unter https://www.mikrocontroller-elektronik.de/
 */
 
 #include <ESP8266WiFi.h>
@@ -12,29 +11,27 @@
 #include "DHTesp.h"
 
 #define ONE_WIRE_BUS 2 // D4
-#define DHTPIN 5 //D1 //Der Sensor wird an PIN 2 angeschlossen    
 
 #define DHTTYPE DHT22    // Es handelt sich um den DHT22 Sensor
+#define DHTPIN 5 //D1 //Der Sensor wird an PIN 2 angeschlossen    
 
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 
-const char* ssid = "xxx"; //Hier SSID eures WLAN Netzes eintragen
-const char* password = "xxx"; //Hier euer Passwort des WLAN Netzes eintragen
+const char* ssid = "muchfaster"; //Hier SSID eures WLAN Netzes eintragen
+const char* password = "Flascheneu"; //Hier euer Passwort des WLAN Netzes eintragen
 
 //ThingSpeek Server
 const char* server = "api.thingspeak.com";
 const int httpPort = 80;
 //ThingSpeek
-String apiKey = "XXX"; 
+String apiKey = "GABMMX3AQTBTJ6IM"; 
 
 WiFiClient client;
 
 /** Initialize DHT sensor */
 DHTesp dht;
 //DHT dht(DHTPIN, DHTTYPE); //Der Sensor wird ab jetzt mit „dth“ angesprochen
-/** Task handle for the light value read task */
-//TaskHandle_t tempTaskHandle = NULL;
 
 //
 // Setup Serial, Wifi, ...
@@ -160,4 +157,5 @@ void loop() {
  
   Serial.println("Schlafe jetzt ...");
   ESP.deepSleep( 10*60000000); //Angabe in Minuten - hier 10
+  //delay(300000); //1Min warten
 }
