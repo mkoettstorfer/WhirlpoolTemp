@@ -18,8 +18,8 @@
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 
-const char* ssid = "muchfaster"; //Hier SSID eures WLAN Netzes eintragen
-const char* password = "Flascheneu"; //Hier euer Passwort des WLAN Netzes eintragen
+const char* ssid = "xxxxxx"; //Hier SSID eures WLAN Netzes eintragen
+const char* password = "xxxxxx"; //Hier euer Passwort des WLAN Netzes eintragen
 
 //ThingSpeek Server
 const char* server = "api.thingspeak.com";
